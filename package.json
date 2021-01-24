@@ -1,0 +1,13 @@
+{
+  "name": "saroosh_portfolio",
+  "version": "1.0.0",
+  "description": "saroosh's portfolio",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
