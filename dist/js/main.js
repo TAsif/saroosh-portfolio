@@ -3,9 +3,11 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.nav-item');
 
-let showMenu = true;
+let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+
+!(window.matchMedia("(max-width: 500px)").matches) && toggleMenu()
 
 function toggleMenu() {
   if (!showMenu) {
