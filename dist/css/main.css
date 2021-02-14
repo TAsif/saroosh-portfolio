@@ -39,9 +39,9 @@
     transition: all 0.4s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
-  .menu .nav-item.current > a {
-    color: #ee0000; }
   .menu .nav-link {
+    background-color: transparent;
+    border: hidden;
     display: inline-block;
     position: relative;
     font-size: 30px;
@@ -51,7 +51,8 @@
     color: #fff;
     text-decoration: none; }
     .menu .nav-link:hover {
-      color: #ee0000; }
+      color: #ee0000;
+      transition: all 0.4s ease-out; }
 
 * {
   box-sizing: border-box; }
@@ -62,14 +63,15 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  overflow: hidden; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
@@ -91,7 +93,8 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem; }
 
-a {
+a,
+button {
   color: #fff;
   text-decoration: none; }
 
@@ -103,20 +106,19 @@ header {
 .text-secondary {
   color: #ee0000; }
 
-main {
+.content {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
-  main .icons {
+  min-height: calc(100vh - 60px);
+  overflow: hidden; }
+  .content .icons {
     margin-top: 1rem; }
-    main .icons a {
+    .content .icons a {
       padding: 0.4rem;
       transition: all 0.4s ease-out; }
-      main .icons a:hover {
+      .content .icons a:hover {
         color: #ee0000; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
+  .content h1 {
+    margin-top: 20vh; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -127,10 +129,10 @@ main {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
-  main {
+  .content {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
+    .content .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
   ul.menu-nav {
@@ -145,12 +147,9 @@ main {
     font-size: 24px; } }
 
 @media screen and (max-width: 500px) {
-  main {
+  .content {
     padding: 2rem; }
-    main #home h1 {
-      margin-top: 10vh; }
-    main .lg-heading {
-      margin-top: 1rem;
+    .content .lg-heading {
       font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }

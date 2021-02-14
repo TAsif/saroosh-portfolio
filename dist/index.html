@@ -21,23 +21,23 @@
 
     <nav class="menu show">
       <ul class="menu-nav">
-        <li class="nav-item current">
-          <a href="index.html" class="nav-link">Home</a>
+        <li class="nav-item">
+          <button type="button" class="nav-link" onclick="smoothScroll(document.getElementById('home'))">Home</button>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">About Me</a>
+          <button type="button" class="nav-link" onclick="smoothScroll(document.getElementById('about-me'))">About Me</button>
         </li>
         <li class="nav-item">
-          <a href="work.html" class="nav-link">Projects</a>
+          <button type="button" class="nav-link" onclick="smoothScroll(document.getElementById('projects'))">Projects</button>
         </li>
         <li class="nav-item">
-          <a href="contact.html" class="nav-link">Contact Information</a>
+          <button type="button" class="nav-link" onclick="smoothScroll(document.getElementById('contact-me'))">Contact Me</button>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main id="home">
+  <div class="content home" id="home">
     <h1 class="lg-heading">
       Saroosh <span class="text-secondary">Ashraf</span>
     </h1>
@@ -45,7 +45,19 @@
     <div class="icons">
       <a href="https://www.linkedin.com/in/sarooshashraf/"><i class="fab fa-2x fa-linkedin"></i></a>
     </div>
-  </main>
+  </div>
+
+  <div class="content about-me" id="about-me">
+    <h1 class="sm-heading">About <span class="text-secondary">Me</span></h1>
+  </div>
+
+  <div class="content projects" id="projects">
+    <h1 class="sm-heading">Projects</h1>
+  </div>
+
+  <div class="content contact-me" id="contact-me">
+    <h1 class="sm-heading">Contact <span class="text-secondary">Me</span></h1>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
