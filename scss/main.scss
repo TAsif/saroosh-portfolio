@@ -1,6 +1,19 @@
 @import "config";
 @import "menu";
 
+::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-track {
+  background-color: $primary-color;
+}
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: $secondary-color;
+  border-radius: 0.25rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +26,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 // Headings
@@ -25,6 +38,10 @@ h3 {
 
   &.lg-heading {
     font-size: 6rem;
+  }
+
+  &.md-heading {
+    font-size: 4rem;
   }
 
   &.sm-heading {
@@ -70,6 +87,64 @@ header {
   h1 {
     margin-top: 20vh;
   }
+
+  h2 {
+    margin-top: 3vh;
+  }
+}
+
+.about-me-contain {
+  padding-top: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .pic {
+    padding-right: 2rem;
+    width: 25%;
+  }
+
+  p {
+    font-size: large;
+  }
+}
+
+.projects-contain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px solid $primary-color;
+
+    &:hover {
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  @include easeOut;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: white;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
 }
 
 @import "mobile";

@@ -1,13 +1,13 @@
 // Widescreens
 @include mediaXl {
-  .projects {
+  .projects-contain {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 // Desktops & Laptops
 @include mediaLg {
-  .projects {
+  .projects-contain {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -39,6 +39,10 @@
     transform: translate3d(0, -100%, 0);
     font-size: 24px;
   }
+
+  .projects-contain {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Smartphones
@@ -51,7 +55,7 @@
     }
   }
 
-  .projects {
+  .projects-contain {
     grid-template-columns: 1fr;
   }
 }

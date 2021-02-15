@@ -34,6 +34,7 @@ function toggleMenu() {
 
 window.smoothScroll = function(target) {
   var scrollContainer = target;
+  //toggleMenu()
   do {
       scrollContainer = scrollContainer.parentNode;
       if (!scrollContainer) return;
