@@ -145,22 +145,17 @@ header {
   display: block;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border: 0;
-  @include easeOut;
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-  }
 }
 
 .btn-dark {
   @extend .btn;
-  background: darken($primary-color, 50);
+  background: darken($primary-color, 25);
   color: white;
 }
 
 .btn-light {
   @extend .btn;
-  background: lighten($primary-color, 50);
+  background: lighten($primary-color, 25);
 }
 
 @import 'mobile';
