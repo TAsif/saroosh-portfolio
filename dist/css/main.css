@@ -54,6 +54,9 @@
       color: #ee0000;
       transition: all 0.4s ease-out; }
 
+* {
+  box-sizing: border-box; }
+
 ::-webkit-scrollbar {
   width: 5px;
   cursor: pointer; }
@@ -66,15 +69,12 @@
   background-color: #ee0000;
   border-radius: 0.25rem; }
 
-* {
-  box-sizing: border-box; }
-
 body {
   background: #444444;
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg);
@@ -151,12 +151,25 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem; }
-  .projects-contain img {
+  .projects-contain .pic {
     width: 100%;
-    border: 3px solid #444444; }
-    .projects-contain img:hover {
+    border: 3px solid #444444;
+    cursor: zoom-in; }
+    .projects-contain .pic:hover {
       border-color: #ee0000;
       transition: all 0.4s ease-out; }
+  .projects-contain .fullscreen {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+    visibility: hidden; }
+    .projects-contain .fullscreen.show {
+      visibility: visible; }
 
 .btn, .btn-dark, .btn-light {
   display: block;

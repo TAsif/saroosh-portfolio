@@ -1,5 +1,9 @@
-@import "config";
-@import "menu";
+@import 'config';
+@import 'menu';
+
+* {
+  box-sizing: border-box;
+}
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -14,17 +18,13 @@
   border-radius: 0.25rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   //overflow: hidden;
 }
@@ -113,13 +113,30 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.7rem;
 
-  img {
+  .pic {
     width: 100%;
     border: 3px solid $primary-color;
+    cursor: zoom-in;
 
     &:hover {
       border-color: $secondary-color;
       @include easeOut;
+    }
+  }
+
+  .fullscreen {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+    visibility: hidden;
+
+    &.show {
+      visibility: visible;
     }
   }
 }
@@ -147,4 +164,4 @@ header {
   background: lighten($primary-color, 50);
 }
 
-@import "mobile";
+@import 'mobile';

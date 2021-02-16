@@ -7,12 +7,15 @@ const home = document.querySelector('.home')
 const aboutMe = document.querySelector('.about-me')
 const projects = document.querySelector('.projects')
 const contactMe = document.querySelector('.contact-me')
+const fullQ = document.querySelector('.fullscreen')
+const full = document.getElementById('fullscreen')
 
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+fullQ.addEventListener('click', exitFullscreen)
 
-!(window.matchMedia("(max-width: 500px)").matches) && toggleMenu()
+!(window.matchMedia("(max-width: 500px)").matches)
 
 function toggleMenu() {
   if (!showMenu) {
@@ -30,6 +33,16 @@ function toggleMenu() {
 
     showMenu = false;
   }
+}
+
+function fullscreen(name) {
+  full.style.background = `rgba(0,0,0,0.5) url('./img/${name}') no-repeat center`
+  fullQ.classList.add('show')
+}
+
+function exitFullscreen() {
+  full.style.background = ``
+  fullQ.classList.remove('show')
 }
 
 window.smoothScroll = function(target) {
