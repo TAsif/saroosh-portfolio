@@ -10,6 +10,15 @@
   .projects-contain {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .about-me-contain {
+    flex-flow: column-reverse wrap;
+    align-items: center;
+
+    .pic {
+      width: 20rem;
+    }
+  }
 }
 
 // Tablets & Small Laptops
@@ -38,6 +47,15 @@
     height: 100vh;
     transform: translate3d(0, -100%, 0);
     font-size: 24px;
+  }
+
+  .about-me-contain {
+    flex-flow: column-reverse wrap;
+    align-items: center;
+
+    .pic {
+      width: 20rem;
+    }
   }
 
   .projects-contain {

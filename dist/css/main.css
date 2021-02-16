@@ -143,7 +143,8 @@ header {
   flex-flow: row nowrap; }
   .about-me-contain .pic {
     padding-right: 2rem;
-    width: 25%; }
+    width: 30rem;
+    height: 100%; }
   .about-me-contain p {
     font-size: large; }
 
@@ -159,7 +160,6 @@ header {
       border-color: #ee0000;
       transition: all 0.4s ease-out; }
   .projects-contain .fullscreen {
-    background-size: contain;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -173,9 +173,8 @@ header {
 
 .btn, .btn-dark, .btn-light {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border: 0;
-  margin-bottom: 0.3rem;
   transition: all 0.4s ease-out; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #ee0000;
@@ -194,7 +193,12 @@ header {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects-contain {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .about-me-contain {
+    flex-flow: column-reverse wrap;
+    align-items: center; }
+    .about-me-contain .pic {
+      width: 20rem; } }
 
 @media screen and (max-width: 768px) {
   .content {
@@ -213,6 +217,11 @@ header {
     height: 100vh;
     transform: translate3d(0, -100%, 0);
     font-size: 24px; }
+  .about-me-contain {
+    flex-flow: column-reverse wrap;
+    align-items: center; }
+    .about-me-contain .pic {
+      width: 20rem; }
   .projects-contain {
     grid-template-columns: repeat(2, 1fr); } }
 

@@ -100,7 +100,8 @@ header {
 
   .pic {
     padding-right: 2rem;
-    width: 25%;
+    width: 30rem;
+    height: 100%;
   }
 
   p {
@@ -125,7 +126,6 @@ header {
   }
 
   .fullscreen {
-    background-size: contain;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -143,9 +143,8 @@ header {
 
 .btn {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border: 0;
-  margin-bottom: 0.3rem;
   @include easeOut;
   &:hover {
     background: $secondary-color;
