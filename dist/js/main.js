@@ -70,7 +70,6 @@ window.smoothScroll = function(target) {
   home.classList.remove('current')
   aboutMe.classList.remove('current')
   projects.classList.remove('current')
-  contactMe.classList.remove('current')
 
   scrollContainer.classList.add('current')
 

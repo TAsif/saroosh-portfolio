@@ -185,6 +185,20 @@ header {
 .btn-light {
   background: #848484; }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #444444; }
+  footer a {
+    text-decoration: none; }
+  footer span {
+    padding: 0.5rem 0.5rem 0.5rem 4rem;
+    vertical-align: middle;
+    font-size: 40px;
+    position: relative; }
+
 @media screen and (min-width: 1171px) {
   .projects-contain {
     grid-template-columns: repeat(4, 1fr); } }
@@ -229,4 +243,6 @@ header {
     .content .lg-heading {
       font-size: 5rem; }
   .projects-contain {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  h3 {
+    font-size: small; } }
